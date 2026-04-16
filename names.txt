@@ -1,0 +1,17 @@
+        # === CH0: QPSK ===
+        self.connect((self.usrp, 0), (self.agc_0, 0))
+        self.connect((self.agc_0, 0), (self.mod_clf_0, 0))
+        self.connect((self.mod_clf_0, 0), (self.fll_0, 0))
+        self.connect((self.fll_0, 0), (self.pfb_0, 0))
+
+        self.connect((self.pfb_0, 0), (self.mimo, 0))
+        self.connect((self.mimo, 0),  (self.costas_0, 0))
+
+        # === CH1: BPSK ===
+        self.connect((self.usrp, 1), (self.agc_1, 0))
+        self.connect((self.agc_1, 0), (self.mod_clf_1, 0))
+        self.connect((self.mod_clf_1, 0), (self.fll_1, 0))
+        self.connect((self.fll_1, 0), (self.pfb_1, 0))
+
+        self.connect((self.pfb_1, 0), (self.mimo, 1))
+        self.connect((self.mimo, 1),  (self.costas_1, 0))
