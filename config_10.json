@@ -1,0 +1,13 @@
+{
+  "label_map": {
+    "BPSK": 0,
+    "QPSK": 1
+  },
+  "labels": {
+    "0": "BPSK",
+    "1": "QPSK"
+  },
+  "slice_len": 1024,
+  "num_classes": 2,
+  "best_val_acc": 0.9865283481017217
+}
